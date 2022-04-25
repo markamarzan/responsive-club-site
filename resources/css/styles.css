@@ -234,7 +234,7 @@ nav a:active {
 }
 
 .blog-post:hover {
-  box-shadow: #FE2C55 0.3rem 0.2rem, #00FFF7 -0.3rem -0.2rem;
+  box-shadow: #FE2C55 0.5rem 0.5rem, #00FFF7 -0.5rem -0.5rem;
 }
 
 .blog .img-container {
