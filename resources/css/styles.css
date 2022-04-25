@@ -135,7 +135,7 @@ nav a:active {
 /* Hero */
 .hero {
   height: 70vh;
-  background-image: url("/resources/images/stock-13.jpg");
+  background-image: url("/resources/images/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
