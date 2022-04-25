@@ -1,0 +1,2 @@
+This is Codecademy's Challenge CSS Project: Responsive Club Website.
+In this project I use more CSS layout tools such as CSS Flexbox and CSS Grid to create a more responsive and mobile-friendly UI for a mock club website. 
