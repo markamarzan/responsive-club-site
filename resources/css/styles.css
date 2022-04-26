@@ -37,6 +37,16 @@ h3 {
   font-size: 1.5em;
 }
 
+@media only screen and (max-width: 320), (max-width: 390), (max-width: 480), (max-width: 768px) {
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+}
+
 /* Forms & Buttons */
 .sign-up {
   display: flex;
@@ -76,7 +86,7 @@ input {
 }
 
 /* Header */
-header {
+header#desktop {
   display: flex;
   justify-content: space-between;
   padding: 1% 5%;
@@ -94,12 +104,12 @@ header {
   height: 100%;
 }
 
-nav {
+#desktop nav {
   display: flex;
   min-width: 80%;
 }
 
-nav ul {
+#desktop nav ul {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -107,29 +117,65 @@ nav ul {
   flex-wrap: wrap;
 }
 
-nav li {
+#desktop nav li {
   display: inline-block;
 }
 
 nav a {
-  padding: 0.625rem 1.25rem;
+  padding: 0.625rem 0.8rem;
   font-size: 1em;
   letter-spacing: 0.2rem;
   text-decoration: none;
   color: #000;
 }
 
-nav a:hover {
+#desktop nav a:hover {
   color: #fff;
   background-color: #000;
   box-shadow: #FE2C55 0.3rem 0.2rem, #00FFF7 -0.3rem -0.2rem;
   transition: box-shadow 0s;
 }
 
-nav a:active {
+#desktop nav a:active {
   color: #fff;
   background-color: #000;
   box-shadow: none;
+}
+
+header#mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  header#desktop {
+    display: none;
+  }
+
+  main, footer {
+    position: relative;
+    top: 16.875rem;
+  }
+
+  header#mobile {
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  #mobile #logo {
+    margin: 0 auto;
+  }
+
+  #mobile nav ul {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+  }
 }
 
 /* Hero */
@@ -164,6 +210,7 @@ nav a:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .monthly-feature .book {
@@ -257,7 +304,7 @@ nav a:active {
   height: auto;
   grid-column-start: 1;
   grid-row-start: 1;
-  z-index: 999;
+  z-index: 998;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.388);
   transition: opacity 0.3s;
@@ -272,6 +319,21 @@ nav a:active {
   width: 100%;
   grid-column-start: 1;
   grid-row-start: 1;
+}
+
+@media only screen and (max-width: 320px), (max-width: 390), (max-width: 480px) {
+  .blog .img-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .blog-post:hover {
+    box-shadow: none;
+  }
+
+  .blog .hover {
+    opacity: 1;
+  }
 }
 
 /* Members */
